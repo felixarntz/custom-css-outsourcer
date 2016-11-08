@@ -18,7 +18,9 @@ Loads the additional Customizer CSS from external files instead of printing it d
 
 == Description ==
 
-TODO
+This tiny plugin modifies the new Custom CSS functionality introduced in WordPress 4.7.
+
+By default, any additional CSS written in the Customizer is printed directly to the head of the page. The plugin changes it to load the CSS from a somewhat virtual file, using a custom rewrite rule, which can make sense to clean up your HTML code. The contents of the stylesheet will be cached.
 
 = Find the project here =
 
