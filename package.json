@@ -1,0 +1,38 @@
+{
+  "name": "custom-css-outsourcer",
+  "version": "1.0.0",
+  "description": "Loads the additional Customizer CSS from external files instead of printing it directly to the page.",
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "custom css",
+    "customizer",
+    "cleanup"
+  ],
+  "author": {
+    "name": "Felix Arntz",
+    "email": "felix-arntz@leaves-and-love.net",
+    "url": "https://leaves-and-love.net"
+  },
+  "homepage": "https://github.com/custom-css-outsourcer",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/felixarntz/custom-css-outsourcer.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/felixarntz/custom-css-outsourcer/issues"
+  },
+  "license": {
+    "type": "GPL-3.0",
+    "name": "GNU General Public License v3",
+    "url": "http://www.gnu.org/licenses/gpl-3.0.html"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-replace": "^0.5.4"
+  }
+}

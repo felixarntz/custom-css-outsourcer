@@ -1,0 +1,33 @@
+{
+  "name": "felixarntz/custom-css-outsourcer",
+  "description": "Loads the additional Customizer CSS from external files instead of printing it directly to the page.",
+  "version": "1.0.0",
+  "license": "GPL-3.0",
+  "type": "wordpress-plugin",
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "custom css",
+    "customizer",
+    "cleanup"
+  ],
+  "homepage": "https://github.com/custom-css-outsourcer",
+  "authors": [
+    {
+      "name": "Felix Arntz",
+      "email": "felix-arntz@leaves-and-love.net",
+      "homepage": "https://leaves-and-love.net",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "felix-arntz@leaves-and-love.net",
+    "issues": "https://github.com/felixarntz/custom-css-outsourcer/issues"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "require": {
+    "composer/installers": "~1.0"
+  }
+}
