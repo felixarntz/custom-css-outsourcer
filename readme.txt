@@ -7,7 +7,7 @@ Author URI:        https://leaves-and-love.net
 Contributors:      flixos90
 Donate link:       https://leaves-and-love.net/wordpress-plugins/
 Requires at least: 4.7-beta.1
-Tested up to:      4.7-beta.2
+Tested up to:      4.7-beta.3
 Stable tag:        1.0.0
 Version:           1.0.0
 License:           GNU General Public License v3
