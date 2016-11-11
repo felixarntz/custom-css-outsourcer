@@ -1,7 +1,7 @@
 === Custom CSS Outsourcer ===
 
 Plugin Name:       Custom CSS Outsourcer
-Plugin URI:        https://github.com/custom-css-outsourcer
+Plugin URI:        https://wordpress.org/plugins/custom-css-outsourcer/
 Author:            Felix Arntz
 Author URI:        https://leaves-and-love.net
 Contributors:      flixos90

@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Custom CSS Outsourcer
-Plugin URI:  https://github.com/custom-css-outsourcer
+Plugin URI:  https://wordpress.org/plugins/custom-css-outsourcer/
 Description: Loads the additional Customizer CSS from external files instead of printing it directly to the page.
 Version:     1.0.0
 Author:      Felix Arntz
