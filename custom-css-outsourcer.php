@@ -261,31 +261,36 @@ class Custom_CSS_Outsourcer {
 	 * @return int The last modified GMT timestamp.
 	 */
 	private function get_last_modified( $stylesheet ) {
-		$custom_css_query_vars = array(
-			'post_type' => 'custom_css',
-			'post_status' => get_post_stati(),
-			'name' => sanitize_title( $stylesheet ),
-			'number' => 1,
-			'no_found_rows' => true,
-			'cache_results' => true,
-			'update_post_meta_cache' => false,
-			'update_term_meta_cache' => false,
-		);
-
 		$post = null;
-		if ( get_stylesheet() === $stylesheet ) {
-			$post_id = get_theme_mod( 'custom_css_post_id' );
-			if ( ! $post_id ) {
+
+		if ( function_exists( 'wp_get_custom_css_post' ) ) {
+			$post = wp_get_custom_css_post( $stylesheet );
+		} else {
+			$custom_css_query_vars = array(
+				'post_type'              => 'custom_css',
+				'post_status'            => get_post_stati(),
+				'name'                   => sanitize_title( $stylesheet ),
+				'number'                 => 1,
+				'no_found_rows'          => true,
+				'cache_results'          => true,
+				'update_post_meta_cache' => false,
+				'update_term_meta_cache' => false,
+			);
+
+			if ( get_stylesheet() === $stylesheet ) {
+				$post_id = get_theme_mod( 'custom_css_post_id' );
+				if ( ! $post_id ) {
+					$query = new WP_Query( $custom_css_query_vars );
+					$post = $query->post;
+
+					set_theme_mod( 'custom_css_post_id', $post ? $post->ID : -1 );
+				} elseif ( $post_id > 0 ) {
+					$post = get_post( $post_id );
+				}
+			} else {
 				$query = new WP_Query( $custom_css_query_vars );
 				$post = $query->post;
-
-				set_theme_mod( 'custom_css_post_id', $post ? $post->ID : -1 );
-			} elseif ( $post_id > 0 ) {
-				$post = get_post( $post_id );
 			}
-		} else {
-			$query = new WP_Query( $custom_css_query_vars );
-			$post = $query->post;
 		}
 
 		// If no post exists, return an ancient timestamp.
